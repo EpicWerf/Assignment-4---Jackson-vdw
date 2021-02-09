@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*@model IEnumerable<Assignment_4___Jackson_vdw.Models.Restaurant>*@
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Jackson's food recommendations!</h1>
+</div>
+
+<div class="btn-group-lg text-center" role="group">
+    @*<a class=" btn btn-primary" asp-action="RestaurantList">View Jackson's Recommendations</a>*@
+    <a class=" btn btn-primary" asp-action="TheirRestaurantSubmit">Submit Your Own Restaurant</a>
+</div>
+
+<br />
+<br />
+
+<div class="text-center">
+    <h3>Check out my recommendations here:</h3>
+</div>
+
+<br />
+
+@*<div>
+    <table>
+        <thead>
+            <tr><th>Rank</th><th>Name</th><th>FaveDish</th><th>Address</th><th>Phone Number</th><th>WebLink</th></tr>
+        </thead>
+
+        <tbody>
+            @foreach (Assignment_4___Jackson_vdw.Models.Restaurant r in Model)
+            {
+                <tr>
+                    <td>@r.Rank</td>
+                    <td>@r.Name</td>
+                    <td>@r.FaveDish</td>
+                    <td>@r.Address</td>
+                    <td>@r.PhoneNumber</td>
+                    <td>@r.WebLink</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>*@
+
+
+@*<div class="list-group">
+    <ul>
+        {
+            <li class="list-group-item">@r.Rank</li>
+            <li class="list-group-item">@r.Name</li>
+            <li class="list-group-item">@r.FaveDish</li>
+            <li class="list-group-item">@r.Address</li>
+            <li class="list-group-item">@r.PhoneNumber</li>
+            <li class="list-group-item">@r.WebLink</li>
+        }
+    </ul>
+</div>*@

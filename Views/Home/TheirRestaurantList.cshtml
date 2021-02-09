@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Restaurant List";
+    ViewData["MainHeader"] = "Restaurant Picks According to YOU!";
+}
+
+@model IEnumerable<Assignment_4___Jackson_vdw.Models.TheirRestaurantResponse>
+
+<div class="text-center">
+    <h1>@ViewData["MainHeader"]</h1>
+</div>
+
+<div>
+    <table>
+        <thead>
+            <tr><th>Rank</th><th>Name</th><th>Favorite Dish</th><th>Phone Number</th></tr>
+        </thead>
+
+        <tbody>
+            @foreach (Assignment_4___Jackson_vdw.Models.TheirRestaurantResponse r in Model)
+            {
+                <tr>
+                    <td>@r.Rank</td>
+                    <td>@r.Name</td>
+                    <td>@r.FaveDish</td>
+                    <td>@r.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
+@*<div class="list-group">
+        <ul>
+            @foreach (string s in Model)
+            {
+                <li class="list-group-item">@s</li>
+            }
+        </ul>
+    </div>*@
+
