@@ -1,5 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
+@*Generic webiste information and title for tab bar*@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,8 +9,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
+
 <body>
     <header>
+
+        @*Create nav bar and add appropriate links to other pages in the website*@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Jackson's Restaurant Recommendations</a>
@@ -32,12 +37,15 @@
             </div>
         </nav>
     </header>
+
+    @*Div housing main content and the body pages that will be added on in each page*@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
+    @*footer housing necessary libraries and scripts*@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - Assignment_4___Jackson_vdw - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>

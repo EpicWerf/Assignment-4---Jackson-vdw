@@ -6,18 +6,24 @@ using System.Threading.Tasks;
 
 namespace Assignment_4___Jackson_vdw.Models
 {
+    //create necessary fields for the model. Some fields have been specified as required.
     public class Restaurant
     {
+                            //SOMEHOW I NEED TO MAKE THE SETTER NOT SET AFTER IT SET THE FIRST TIME FOR RANK
+        [Required]
         public int Rank { get; set; }
+        [Required]
         public string Name { get; set; }
         public string FaveDish { get; set; }
+        [Required]
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
         public string WebLink { get; set; }
 
-
+        //create a method that will return a prepopulated list of restaurants when called
         public static Restaurant[] GetRestaurants()
         {
+            //all of these create new restaurants that will be passed to a list
             Restaurant r1 = new Restaurant
             {
                 Rank = 1,
@@ -68,6 +74,7 @@ namespace Assignment_4___Jackson_vdw.Models
                 WebLink = "www.pfchangs.com"
             };
 
+            //send the list back to whoever called it.
             return new Restaurant[] { r1, r2, r3, r4, r5 };
         }
     }

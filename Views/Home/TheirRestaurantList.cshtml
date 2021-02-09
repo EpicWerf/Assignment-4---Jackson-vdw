@@ -3,22 +3,29 @@
     ViewData["MainHeader"] = "Restaurant Picks According to YOU!";
 }
 
+@*Bring in model that will be used in this page*@
 @model IEnumerable<Assignment_4___Jackson_vdw.Models.TheirRestaurantResponse>
 
+@*welcome to web page*@
 <div class="text-center">
     <h1>@ViewData["MainHeader"]</h1>
 </div>
 
-<div>
-    <table>
+
+@*Use bootstrap and create sexy table that will hold the restaurant recommendations that the user inputs*@
+<div class="container">
+    <table class="table table-hover">
+
+        @*create the header row for the table*@
         <thead>
             <tr><th>Rank</th><th>Name</th><th>Favorite Dish</th><th>Phone Number</th></tr>
         </thead>
 
         <tbody>
+            @*Go through each item the user has submitted so far and make a table out of it*@
             @foreach (Assignment_4___Jackson_vdw.Models.TheirRestaurantResponse r in Model)
             {
-                <tr>
+                <tr class="active">
                     <td>@r.Rank</td>
                     <td>@r.Name</td>
                     <td>@r.FaveDish</td>
@@ -28,16 +35,3 @@
         </tbody>
     </table>
 </div>
-
-
-
-
-@*<div class="list-group">
-        <ul>
-            @foreach (string s in Model)
-            {
-                <li class="list-group-item">@s</li>
-            }
-        </ul>
-    </div>*@
-

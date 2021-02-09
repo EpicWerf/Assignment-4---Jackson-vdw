@@ -1,18 +1,24 @@
 ﻿@{ ViewData["Title"] = "Submit Your Own Restaurant";
 }
 
+@*Bring in the model that will be used when the user submits their recommendation*@
 @model Assignment_4___Jackson_vdw.Models.TheirRestaurantResponse
 
+@*welcome to web page*@
 <div class="text-center">
     <h1>@ViewData["Title"]</h1>
 </div>
 
+@*create the form that will house the input boxes with information we want to collect from the user*@
+@*Use asp-action and asp-for to specify correct actions and point to correct pieces of the model*@
 <div class="text-center">
+
     <form asp-action="TheirRestaurantSubmit" method="post">
+
         <div class="form-group row">
             <label class="col-sm-2 col-form-label" asp-for="Rank">Rank</label>
             <div class="col-sm-10">
-                <input class="form-control" asp-for="Rank" placeholder="e.g. 1"/>
+                <input class="form-control" asp-for="Rank" placeholder="e.g. 1" />
             </div>
         </div>
 
@@ -26,10 +32,11 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label" asp-for="FaveDish">FaveDish</label>
             <div class="col-sm-10">
-                <input class="form-control" asp-for="FaveDish" placeholder="e.g. Orange Chicken"/>
+                <input class="form-control" asp-for="FaveDish" placeholder="e.g. Orange Chicken" />
             </div>
         </div>
 
+        @*Not currently being asked for but it seems like it would be in the future?*@
         @*<div class="form-group row">
             <label class="col-sm-2 col-form-label" asp-for="Address">Address</label>
             <div class="col-sm-10">
@@ -40,10 +47,11 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label" asp-for="PhoneNumber">Phone Number</label>
             <div class="col-sm-10">
-                <input class="form-control" asp-for="PhoneNumber" placeholder="e.g. 801-818-0111"/>
+                <input class="form-control" asp-for="PhoneNumber" placeholder="e.g. 801-818-0111" />
             </div>
         </div>
 
+        @*Not currently being asked for but it seems like it would be in the future?*@
         @*<div class="form-group row">
             <label class="col-sm-2 col-form-label" asp-for="WebLink">Link to Website</label>
             <div class="col-sm-10">
@@ -51,8 +59,10 @@
             </div>
         </div>*@
 
+        @*Output for any form boxes that fail the validation*@
         <div asp-validation-summary="All"></div>
 
+        @*Submit button*@
         <input type="submit" value="Submit your recommendation" />
 
     </form>

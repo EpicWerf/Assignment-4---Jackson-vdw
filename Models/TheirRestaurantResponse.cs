@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_4___Jackson_vdw.Models
 {
+    //create a model that will be used whenever a user submits a restaurant recommendation
     public class TheirRestaurantResponse
     {
         [Required]
@@ -13,8 +14,7 @@ namespace Assignment_4___Jackson_vdw.Models
         [Required]
         public string Name { get; set; }
         public string FaveDish { get; set; }
-        [Required]
-        [Phone]
+        [Required][Phone]
         public string PhoneNumber { get; set; }
     }
 }
