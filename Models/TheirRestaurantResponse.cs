@@ -8,15 +8,11 @@ namespace Assignment_4___Jackson_vdw.Models
 {
     //create a model that will be used whenever a user submits a restaurant recommendation
 
-    //I would usually put default values and required fields, but Prof 
-    //Hilton said in class that we shouldn't do that for this form
-
     public class TheirRestaurantResponse
     {
         #nullable enable
-
         [Required] 
-        public int? Rank { get; set; }
+        public int Rank { get; set; }
 
         [Required]
         public string? Name { get; set; }
@@ -25,7 +21,7 @@ namespace Assignment_4___Jackson_vdw.Models
         public string? FaveDish { get; set; }
 
         //check to make sure phone number is in valid format
-        [Phone][Required]
+        [Phone]
         public string? PhoneNumber { get; set; }
     }
 }
