@@ -7,14 +7,25 @@ using System.Threading.Tasks;
 namespace Assignment_4___Jackson_vdw.Models
 {
     //create a model that will be used whenever a user submits a restaurant recommendation
+
+    //I would usually put default values and required fields, but Prof 
+    //Hilton said in class that we shouldn't do that for this form
+
     public class TheirRestaurantResponse
     {
+        #nullable enable
+
+        [Required] 
+        public int? Rank { get; set; }
+
         [Required]
-        public string Rank { get; set; }
-        [Required]
-        public string Name { get; set; }
-        public string FaveDish { get; set; }
-        [Required][Phone]
-        public string PhoneNumber { get; set; }
+        public string? Name { get; set; }
+
+        //Favorite Dish and Phone number are optional, so put a ? to protect the program from breaking if the user inputs nothing
+        public string? FaveDish { get; set; }
+
+        //check to make sure phone number is in valid format
+        [Phone][Required]
+        public string? PhoneNumber { get; set; }
     }
 }

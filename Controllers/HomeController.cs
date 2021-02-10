@@ -28,20 +28,14 @@ namespace Assignment_4___Jackson_vdw.Controllers
             //replace empty values according to the homework guidelines
             foreach (Restaurant r in Restaurant.GetRestaurants())
             {
-                if (string.IsNullOrEmpty(r.FaveDish))
-                {
-                    r.FaveDish = "It's all tasty!";
-                }
-                if (string.IsNullOrEmpty(r.WebLink))
-                {
-                    r.WebLink = "Coming soon.";
-                }
                 //add a restaurant to the list that can be outputted to the index page
-                restaurantList.Add($"#{r.Rank}: {r.Name} " +
-                    $"\n \t Favorite Dish: {r.FaveDish}" +
-                    $"\n \t Address: {r.Address}" +
-                    $"\n \t Phone Number: {r.PhoneNumber}" +
-                    $"\n \t Link to Website: {r.WebLink}");
+                //It seems like this should work for new lines and tabs, but it doesn't lol.
+                    //i'm leaving it in to remind to try to find something that does work
+                restaurantList.Add($"#{r.Rank}: {r.Name} ///" +
+                    $"\n \t Favorite Dish: {r.FaveDish} ///" +
+                    $"\n \t Address: {r.Address} ///" +
+                    $"\n \t Phone Number: {r.PhoneNumber} ///" +
+                    $"\n \t Link to Website: {r.WebLink} ///");
             }
 
             //return the index page view and pass the list holding the restaurants i created in the restaurant model.
