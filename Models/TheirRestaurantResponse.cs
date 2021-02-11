@@ -21,7 +21,8 @@ namespace Assignment_4___Jackson_vdw.Models
         public string? FaveDish { get; set; }
 
         //check to make sure phone number is in valid format
-        [Phone]
+        [RegularExpression(@"\d{3}-\d{3}-\d{4}$",
+         ErrorMessage = "Phone number must be in valid format: XXX-XXX-XXXX.")]
         public string? PhoneNumber { get; set; }
     }
 }
